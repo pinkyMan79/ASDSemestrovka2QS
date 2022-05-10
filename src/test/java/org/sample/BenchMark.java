@@ -7,8 +7,8 @@ import java.util.Random;
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.All)
-@Warmup(iterations = 5, time = 1)
-@Measurement(iterations = 5, time = 1)
+@Warmup(iterations = 1, time = 1)
+@Measurement(iterations =1, time = 1)
 public class BenchMark {
 
     Random generator = new Random();

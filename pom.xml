@@ -32,6 +32,14 @@
       <version>1.21</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->
+    <dependency>
+      <groupId>org.jfree</groupId>
+      <artifactId>jfreechart</artifactId>
+      <version>1.0.19</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core -->
     <dependency>
       <groupId>org.openjdk.jmh</groupId>
