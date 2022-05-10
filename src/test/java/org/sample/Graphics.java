@@ -12,6 +12,8 @@ import org.jfree.data.time.Second;
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.xy.XYDataset;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleInsets;
 
 import javax.swing.*;
@@ -35,29 +37,29 @@ public class Graphics extends JFrame {
 
     private static XYDataset createDataset() {
 
-        TimeSeriesCollection dataset = new TimeSeriesCollection();
+        XYSeriesCollection dataset = new XYSeriesCollection();
         dataset.removeAllSeries();
 
-        TimeSeries s1 = new TimeSeries("Speed on Bench");
-        s1.addOrUpdate(new Millisecond(), 839408.48);
-        s1.addOrUpdate(new Millisecond(), 831408.48);
-        s1.addOrUpdate(new Millisecond(), 989950.35);
-        s1.addOrUpdate(new Millisecond(), 873326.89);
-        s1.addOrUpdate(new Millisecond(), 890497.64);
-        s1.addOrUpdate(new Millisecond(), 888555.26);
-        s1.addOrUpdate(new Millisecond(), 898555.26);
-        s1.addOrUpdate(new Millisecond(), 868555.26);
-        s1.addOrUpdate(new Millisecond(), 900249.12);
+        XYSeries s1 = new XYSeries("Speed on Bench");
+        s1.add(1.0, 839408.48);
+        s1.add(2.0, 831408.48);
+        s1.add(3.0, 989950.35);
+        s1.add(4.0, 873326.89);
+        s1.add(5.0, 890497.64);
+        s1.add(6.0, 888555.26);
+        s1.add(7.0, 898555.26);
+        s1.add(8.0, 868555.26);
+        s1.add(9.0, 900249.12);
 
 
-        TimeSeries s2 = new TimeSeries("Speed on Errors");
-        s2.addOrUpdate(new Millisecond(), 321429.032);
-        s2.addOrUpdate(new Millisecond(), 329429.032);
-        s2.addOrUpdate(new Millisecond(), 27649.410);
-        s2.addOrUpdate(new Millisecond(), 358362.676);
-        s2.addOrUpdate(new Millisecond(), 419953.668);
-        s2.addOrUpdate(new Millisecond(), 1419953.668);
-        s2.addOrUpdate(new Millisecond(), 473533.899);
+        XYSeries s2 = new XYSeries("Speed on Errors");
+        s2.add(1.0, 321429.032);
+        s2.add(2.0, 329429.032);
+        s2.add(3.0, 27649.410);
+        s2.add(4.0, 358362.676);
+        s2.add(5.0, 419953.668);
+        s2.add(6.0, 1419953.668);
+        s2.add(7.0, 473533.899);
 
         dataset.addSeries(s1);
         dataset.addSeries(s2);
@@ -90,8 +92,8 @@ public class Graphics extends JFrame {
         XYItemRenderer r = plot.getRenderer();
         if (r instanceof XYLineAndShapeRenderer) {
             XYLineAndShapeRenderer renderer = (XYLineAndShapeRenderer) r;
-            renderer.setBaseShapesVisible   (true);
-            renderer.setBaseShapesFilled    (true);
+            renderer.setBaseShapesVisible(true);
+            renderer.setBaseShapesFilled(true);
             renderer.setDrawSeriesLineAsPath(true);
         }
 
