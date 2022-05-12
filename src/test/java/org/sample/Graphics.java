@@ -50,6 +50,9 @@ public class Graphics extends JFrame {
         s1.add(7.0, 898555.26);
         s1.add(8.0, 868555.26);
         s1.add(9.0, 900249.12);
+        s1.add(10.0, 828744.674);
+        s1.add(11.0, 830501.530);
+        s1.add(12.0, 846423.508);
 
 
         XYSeries s2 = new XYSeries("Speed on Errors");
@@ -58,8 +61,12 @@ public class Graphics extends JFrame {
         s2.add(3.0, 27649.410);
         s2.add(4.0, 358362.676);
         s2.add(5.0, 419953.668);
-        s2.add(6.0, 1419953.668);
+        s2.add(6.0, 141993.668);
         s2.add(7.0, 473533.899);
+        s2.add(8.0, 383879.257);
+        s2.add(9.0, 261467.949);
+        s2.add(9.0, 419314.410);
+
 
         dataset.addSeries(s1);
         dataset.addSeries(s2);

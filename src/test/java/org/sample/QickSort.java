@@ -1,5 +1,7 @@
 package org.sample;
 
+//https://www.youtube.com/watch?v=4Da4HzcBuLo
+
 public class QickSort {
 
     private int[] array;
